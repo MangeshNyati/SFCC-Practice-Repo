@@ -69,7 +69,8 @@ $menu-item-margin: 0.625em;
     text-align: center;
 
     img {
-        width: 100%;
+        width: 70%;
+        margin-top: -17%;
     }
 
     @include media-breakpoint-up(lg) {
