@@ -70,13 +70,14 @@ $menu-item-margin: 0.625em;
     text-align: center;
 
     img {
-        width: 100%;
+        width: 50%;
+    margin-top: -7%
     }
 
     @include media-breakpoint-up(lg) {
         width: 14.125em; /* 226/16 */
         margin-left: -7.0625em; /* 113/16 */
-        padding-top: 0.5em;
+        padding-top: 0.0em;
     }
 
     @include media-breakpoint-down(md) {
