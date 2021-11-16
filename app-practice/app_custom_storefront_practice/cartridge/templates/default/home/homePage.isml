@@ -3,7 +3,8 @@
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addJs('/js/productTile.js');
         assets.addCss('/css/homePage.css');
-        assets.addCss('/css/sanket.css');
+    </isscript>
+
 
     <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
@@ -12,10 +13,6 @@
 <div class="home-banner">
 <isslot id="HomeBanner" context="global" description="home banner"/>
   </div>
-<h1>Sanket</h1>
-    <div class="home-main1 homepage">
-        <isslot id="home-demo-car" description="Carosel" context="global" />
-    </div>
 
     <div class="container home-categories homepage">
         <div class="row home-main-categories no-gutters">
