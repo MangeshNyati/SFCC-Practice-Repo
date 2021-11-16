@@ -5,7 +5,9 @@
         assets.addCss('/css/homePage.css');
     </isscript>
 
-    <h1>Hello Team Codey !</h1>
+    <div class="conatiner">
+        <isslot id="HomeBanner" context="global" description="" context-object="" preview-url="" />
+    </div>
 
     <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
