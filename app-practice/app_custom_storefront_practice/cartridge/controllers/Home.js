@@ -55,4 +55,13 @@ server.post('customSubmit', consentTracking.consent, function (req, res, next) {
     next();
 });
 
+server.get('gotonext', consentTracking.consent, function (req, res, next) {
+    
+    res.render('home/demo', {
+        
+   })
+    next();
+});
+
+
 module.exports = server.exports();

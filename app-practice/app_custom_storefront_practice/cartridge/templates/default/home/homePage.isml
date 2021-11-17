@@ -5,29 +5,15 @@
         assets.addCss('/css/homePage.css');
     </isscript>
 
-<<<<<<< Updated upstream
     <div class="conatiner">
         <isslot id="HomeBanner" context="global" description="" context-object="" preview-url="" />
     </div>
-
-    <iscomment> <form
-    action="${pdict.createAccountUrl}"
-    class="registration"
-    method="POST"
-    name="${pdict.profileForm.htmlName}"> </iscomment>
 
     <form action="${URLUtils.url('Home-customSubmit')}" method="POST">
     <div class="form-group
         <isif condition="${!!pdict.form.customer.firstname.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-fname">firstname
             <isprint value="${pdict.form.customer.firstname.label}" encoding="htmlcontent" />
-=======
-    <h1>Login Form</h1>
-    <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.firstname.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-fname">
-            <isprint value="${pdict.profileForm.customer.firstname.label}" encoding="htmlcontent" />
->>>>>>> Stashed changes
         </label>
         <input
             type="text"
@@ -36,35 +22,13 @@
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
             aria-describedby="form-fname-error"
-<<<<<<< Updated upstream
             <isprint value=${pdict.form.customer.firstname.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-fname-error"></div>
     </div>
-=======
-            <isprint value=${pdict.profileForm.customer.firstname.attributes} encoding="off" />>
-        <div class="invalid-feedback" id="form-fname-error"></div>
-    </div>
-
-    <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.lastname.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-lname">
-            <isprint value="${pdict.profileForm.customer.lastname.label}" encoding="htmlcontent" />
-        </label>
-        <input
-            type="text"
-            class="form-control"
-            id="registration-form-lname"
-            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
-            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
-            aria-describedby="form-lname-error"
-            <isprint value=${pdict.profileForm.customer.lastname.attributes} encoding="off" />>
-        <div class="invalid-feedback" id="form-lname-error"></div>
-    </div>
->>>>>>> Stashed changes
 
     <div class="form-group
         <isif condition="${!!pdict.form.customer.lastname.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-lname">lastname
+        <label class="form-control-label" for="registration-form-lname">LastName
             <isprint value="${pdict.form.customer.lastname.label}" encoding="htmlcontent" />
         </label>
         <input
@@ -81,6 +45,10 @@
     </form>
         
         
+        <div class="abs">
+        <a href="${URLUtils.url('Home-gotonext')}">
+        Support</a>
+        </div>
     
     <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
@@ -117,6 +85,10 @@
                         </div>
                     </div>
                     <div class="col-sm-7 email-description">${Resource.msg('description.form.emailsignup', 'homePage', null)}</div>
+
+                    <div class="col-sm-3 email-description">
+                        ${Resource.msg('placeholdertext.form.support', 'homePage', null)}
+                    </div>
                 </div>
             </form>
         </div>
