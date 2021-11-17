@@ -1,33 +1,79 @@
-<h1>I am demo</h1>
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/productTile.js');
+        assets.addCss('/css/homePage.css');
+    </isscript>
 
-<form action="${URLUtils.url('Home-customSubmit')}" method="POST">
-    <div class="form-group
+    <form action="${URLUtils.url('Home-customSubmit')}" method="POST">
+        <div class="form-group
         <isif condition=" ${!!pdict.form.customer.firstname.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-fname">firstname
-            <isprint value="${pdict.form.customer.firstname.label}" encoding="htmlcontent" />
-        </label>
-        <input type="text" class="form-control" id="registration-form-fname"
-            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
-            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
-            aria-describedby="form-fname-error" <isprint value=${pdict.form.customer.firstname.attributes}
-            encoding="off" />>
-        <div class="invalid-feedback" id="form-fname-error"></div>
-    </div>
+            <label class="form-control-label" for="registration-form-fname">Firstname
+                <isprint value="${pdict.form.customer.firstname.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="registration-form-fname"
+                data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+                aria-describedby="form-fname-error" <isprint value=${pdict.form.customer.firstname.attributes}
+                encoding="off" />>
+            <div class="invalid-feedback" id="form-fname-error"></div>
+        </div>
 
-    <div class="form-group
+        <div class="form-group
         <isif condition=" ${!!pdict.form.customer.lastname.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-lname">LastName
-            <isprint value="${pdict.form.customer.lastname.label}" encoding="htmlcontent" />
-        </label>
-        <input type="text" class="form-control" id="registration-form-lname"
-            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
-            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
-            aria-describedby="form-lname-error" <isprint value=${pdict.form.customer.lastname.attributes}
-            encoding="off" />>
-        <div class="invalid-feedback" id="form-lname-error"></div>
+            <label class="form-control-label" for="registration-form-lname">LastName
+                <isprint value="${pdict.form.customer.lastname.label}" encoding="htmlcontent" />
+            </label>
+            <input type="text" class="form-control" id="registration-form-lname"
+                data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+                aria-describedby="form-lname-error" <isprint value=${pdict.form.customer.lastname.attributes}
+                encoding="off" />>
+            <div class="invalid-feedback" id="form-lname-error"></div>
+        </div>
+
+        <button class="submit_button" type="submit" value="submit" name="submit">
+            ${Resource.msg('button.form.submit', 'homePage', null)}
+        </button>
+    </form>
+
+    <!-- +1.888.555.0199 -->
+    <!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
+    <div class="home-main homepage">
+        <isslot id="home-main-m" description="Main home page slot." context="global" />
+        <isslot id="home-product" context="global" description="home product" />
     </div>
 
-    <button class="mt-5" type="submit" value="submit" name="submit">
-        ${Resource.msg('button.form.submit', 'homePage', null)}
-    </button>
-</form>
+
+
+    <div class="container home-categories homepage">
+        <div class="row home-main-categories no-gutters">
+            <isslot id="home-categories-m" description="Categories slots on the home page." context="global" />
+        </div>
+    </div>
+
+
+    <div class="home-email-signup">
+        <div class="container">
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="hpEmailSignUp"
+                                placeholder="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}"
+                                aria-label="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}">
+                            <span class="input-group-append">
+                                <button type="submit" class="btn btn-primary subscribe-email"
+                                    data-href="${URLUtils.url('EmailSubscribe-Subscribe')}">${Resource.msg('button.form.emailsignup', 'homePage', null)} </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 email-description">${Resource.msg('description.form.emailsignup', 'homePage', null)}</div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</isdecorate>
