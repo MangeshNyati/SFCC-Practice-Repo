@@ -8,13 +8,14 @@
             <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}"/>
         </div>
 
-        <iscomment> <isif condition="${loopState.count == 1}" >
+         <isif condition="${loopState.count == 1}" >
             <div class="card col-6 col-sm-4 hp-product-content">
                 <div class="card-body">
                     <iscontentasset aid="home-product-tile-content" />
                 </div>
             </div>
-        </isif> </iscomment>
+        </isif> 
 
     </isloop>
+    
 </div>
