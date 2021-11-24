@@ -9,12 +9,14 @@
         <isslot id="HomeBanner" context="global" description="" context-object="" preview-url="" />
     </div>
 
-    hiiii
-   
-    <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
+    <h1>Hello, I m chait!</h1>
+
+
+    <!-- +1.888.555.0199 -->
+    <!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
-        
-        <isslot id="home-product" context="global" description="home product"  />
+        <isslot id="home-main-m" description="Main home page slot." context="global" />
+        <isslot id="home-product" context="global" description="home product" />
     </div>
 
 
@@ -61,5 +63,11 @@
 
             </form>
         </div>
+    </div>
+
+    <div class="bg-primary p-2">
+        <a href="${URLUtils.url('Home-gotonext')}">
+            <h3><b>SUPPORT</b></h1>
+        </a>
     </div>
 </isdecorate>
