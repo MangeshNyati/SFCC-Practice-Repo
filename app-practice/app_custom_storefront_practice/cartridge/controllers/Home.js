@@ -49,10 +49,19 @@ server.append('Show', consentTracking.consent, function (req, res, next) {
 
 server.post('customSubmit', consentTracking.consent, function (req, res, next) {
     var customForm = server.forms.getForm('profile');
-    res.render('home/demo', {
+    res.render('home/formSubmit', {
         form: customForm
    })
     next();
 });
+
+
+//This function is for support button on homepage
+server.get('gotonext', consentTracking.consent, function (req, res, next) {
+    res.render('home/demo', {
+   })
+    next();
+});
+
 
 module.exports = server.exports();
