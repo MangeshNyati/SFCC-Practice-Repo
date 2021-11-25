@@ -7,6 +7,8 @@
 
     <div class="conatiner">
         <isslot id="HomeBanner" context="global" description="" context-object="" preview-url="" />
+    
+        <isslot id="MultiProd" context="global" description="" context-object="" preview-url="" />   
     </div>
 
     <h1>Hello, I m chait!</h1>
