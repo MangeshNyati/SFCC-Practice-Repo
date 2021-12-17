@@ -11,7 +11,87 @@
         <isslot id="MultiProd" context="global" description="" context-object="" preview-url="" />   
     </div>
 
-    <h1>Hello, I m chait!</h1>
+    <div class="container">
+        <form id="form" action="${URLUtils.url('Home-formsubmit')}" method="POST">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="firstname">Firstname</label>
+                <input id="firstname" name="firstname" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="lastname">Lastname</label>
+                <input id="lastname" name="lastname" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Confirm Password</label>
+                <input id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="phone">Phone</label>
+                <input id="phone"name="phone" type="phone">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="pin">Pincode</label>
+                <input id="pin"name="pin" type="pin">
+                <div class="error"></div>
+            </div>
+            <button id="sub" type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+
+    <h2>Native Sharing</h2>
+   <button id="shareBtn">Share</button>
+  
+    <script>
+        document.querySelector('#shareBtn')
+        .addEventListener('click', event => {
+  
+            // Fallback, Tries to use API only
+            // if navigator.share function is
+            // available
+            if (navigator.share) {
+                navigator.share({
+  
+                    // Title that occurs over
+                    // web share dialog
+                    title: 'GeeksForGeeks',
+  
+                    // URL to share
+                    url: 'window.location.href'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(err => {
+  
+                    // Handle errors, if occured
+                    console.log(
+                    "Error while using Web share API:");
+                    console.log(err);
+                });
+            } else {
+  
+                // Alerts user if API not available 
+                alert("Browser doesn't support this API !");
+            }
+        })
+    </script>
+
+  
+   
     <h2>Accordion</h2>
  
 <button class="accordion">Redmi</button>
@@ -30,6 +110,67 @@
 </div>
 
 
+<div class="demoImage" style=" height:320px ;width:400px">
+        <img src="${URLUtils.staticURL("images/account.jpg")}" class="fetch-img-src" alt="this is image"
+            style="display:none , height:320px , width:400px">
+
+    </div>
+    <h1>custom scroller</h1>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right" onsubmit="return false;">
+        <div class="form-group">
+          <input id="scroll-info-value" type="text" placeholder="scroll" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">It works!</button>
+      </form>
+    </div>
+    <!--/.navbar-collapse -->
+  </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+  <div class="container get-nicer">
+
+    <div class="nice-wrapper">
+
+      <h1>Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+
+      <hr>
+
+      <h1>Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      
+
+      <hr>
+
+      <h1>Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      
+      <hr>
+
+      <h1>Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      
+    </div>
+
+  </div>
+
+</div>
 
 
 
